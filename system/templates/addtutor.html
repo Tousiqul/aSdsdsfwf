@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Addtutor</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(53, 22, 22, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: blue;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    input[type="submit"]:hover {
+        background-color: blue;
+
+    }
+    .image-button{
+        width: 80px;
+        height: 80px;
+        border-radius: 30%;
+        margin:10px auto;
+        display:block; 
+
+    }
+</style>
+</head>
+<body>
+
+    <a class="nav-link" href="{% url 't_home' %}">Home</a>
+<div class="container">
+    <h2>Add Tutor</h2>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <label for="card-number">Student Email:</label>
+        <input type="text" id="card-number" name="stdname" required>
+
+        <label for="card-number">Teacher Name:</label>
+        <input type="text" id="card-number" name="tcrname"  required>
+        
+        
+        
+        <label for="card-number">Mobile</label>
+        <input type="int" id="card-number" name="mobile"  required>
+<br><br>
+        <label for="card-holder">Start Date:</label>
+        <input type="date" id="card-holder" name="startDate" placeholder="DD/MM/YY"  required>
+<br><br>
+        <label for="expiry">Payment Offered:</label>
+        <input type="int" id="expiry" name="payment1"  required>
+
+        <label for="expiry">Area</label>
+        <input type="int" id="expiry" name="area"  required>
+<br><br>
+        <button type="submit" value="submit">Submit</button>
+    </form>
+</div>
